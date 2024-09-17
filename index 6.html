@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed's Imagination</title>
+    <style>
+        /* Body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #ff4081, #3f51b5);
+            background-size: 200% 200%;
+            animation: gradientAnimation 10s ease infinite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        /* Gradient background animation */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 5rem;
+            font-family: 'Pacifico', cursive;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            animation: pulse 3s infinite;
+        }
+
+        /* Pulse animation */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Search bar styling */
+        .search-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-input {
+            width: 500px;
+            padding: 15px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: 0.3s ease;
+        }
+
+        .search-input:focus {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-button {
+            padding: 15px 30px;
+            margin-left: 10px;
+            background-color: #ff4081;
+            color: white;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-button:hover {
+            background-color: #f50057;
+        }
+
+        /* Link styling */
+        .links {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .links a {
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .links a:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        .links a:hover:before {
+            width: 100%;
+        }
+
+        .links a:hover {
+            color: #ffeb3b;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Ahmed's Imagination</h1>
+
+    <!-- Form that submits the search query to Google -->
+    <form class="search-box" action="https://www.google.com/search" method="GET">
+        <input type="text" class="search-input" name="q" placeholder="Search your imagination...">
+        <button type="submit" class="search-button">Search</button>
+    </form>
+
+    <div class="links">
+        <a href="https://www.google.com/imghp" target="_blank">Images</a>
+        <a href="https://www.google.com/videohp" target="_blank">Videos</a>
+        <a href="https://www.google.com/maps" target="_blank">Maps</a>
+        <a href="https://news.google.com" target="_blank">News</a>
+        <a href="https://www.google.com/shopping" target="_blank">Shopping</a>
+    </div>
+
+    <footer>
+        Ahmed's Imagination &copy; 2024
+        <a href="#">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+    </footer>
+
+</body>
+</html>
